@@ -3,6 +3,7 @@ package com.netflix_mobile;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
+import android.os.Bundle;
 
 public class MainActivity extends ReactActivity {
 
@@ -23,6 +24,15 @@ public class MainActivity extends ReactActivity {
   @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
     return new MainActivityDelegate(this, getMainComponentName());
+  }
+
+  /**
+   * react-native-screens package requires this additional configuration to properly work on
+   * Android devices.
+   */
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 
   public static class MainActivityDelegate extends ReactActivityDelegate {
