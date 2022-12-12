@@ -2,9 +2,9 @@ Application Android
 
 19/12/2022
 - Login
-    auth fonctionnel firebase ou mongo
+    auth fonctionnel firebase
 - Register
-    auth fonctionnel firebase ou mongo
+    auth fonctionnel firebase
 - Home
     liste vidéos
 - Details
