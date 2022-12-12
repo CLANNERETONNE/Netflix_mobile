@@ -6,11 +6,11 @@ Figma: https://www.figma.com/file/MxrzCfIbHPQcXrB3VUmXsM/Netflix?node-id=1%3A2&t
 - Register
     auth fonctionnel firebase ou mongo
 - Home
-    classement vidéo par catégories
+    liste vidéos
 - Details
     Voir vidéo
 
-    
+
 09/01/2023
 - Home
     bare de recherche
