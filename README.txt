@@ -1,4 +1,4 @@
-Figma: https://www.figma.com/file/MxrzCfIbHPQcXrB3VUmXsM/Netflix?node-id=1%3A2&t=LoACiZrFkQXgjtsa-1
+Application Android
 
 19/12/2022
 - Login
@@ -10,10 +10,12 @@ Figma: https://www.figma.com/file/MxrzCfIbHPQcXrB3VUmXsM/Netflix?node-id=1%3A2&t
 - Details
     Voir vidéo
 
-
 09/01/2023
 - Home
     bare de recherche
     User liste (watch later)
     page par categories
     Notifications
+
+Ressource:
+    Figma: https://www.figma.com/file/MxrzCfIbHPQcXrB3VUmXsM/Netflix?node-id=1%3A2&t=LoACiZrFkQXgjtsa-1
