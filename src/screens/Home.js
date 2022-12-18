@@ -25,6 +25,8 @@ const Home = () => {
       url: 'https://imdb8.p.rapidapi.com/auto-complete',
       params: {
         q: 'game',
+        limit: 20,
+        offset: page * offset,
       },
       headers: {
         'X-RapidAPI-Key': API_KEY,
@@ -47,10 +49,10 @@ const Home = () => {
           style={{
             width: 100,
             height: 100,
-            backgroundColor: 'red',
+            backgroundColor: 'black',
           }}
           source={{
-            uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png',
+            uri: item.i.imageUrl,
           }}
         />
         <Text>{item.l}</Text>
