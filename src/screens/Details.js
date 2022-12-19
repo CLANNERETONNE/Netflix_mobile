@@ -35,7 +35,7 @@ const Details = ({route}) => {
           backgroundColor: 'black',
         }}
         source={{
-          uri: video.i.imageUrl,
+          uri: video.imageUrl,
         }}
       />
     </View>

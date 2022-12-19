@@ -12,6 +12,8 @@ import axios from 'axios';
 // import {API_KEY} from '@env';
 
 const Home = () => {
+  const navigation = useNavigation();
+
   //const API_KEY = 'AIzaSyB9M1E7bfBj3oLcLly7HHOQ8zh0-50Xnkw'; //AWS API_KEY
   //const API_KEY = '4784df1647mshe43daaece94ab39p1fc107jsnc4f2a98a7d75'; //Rapid API API_KEY
   const API_KEY = '7bdc2ec1f4mshee98888228efd4fp1da953jsnd7fc01bdbb87';
@@ -43,11 +45,13 @@ const Home = () => {
       });
   }, [page]);
 
-  const navigation = useNavigation();
-
   const renderItem = ({item}) => {
     return (
-      <TouchableOpacity onPress={navigation.navigate('Details', {id: item.id})}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Details', {id: item.id});
+          console.log('navigate to details');
+        }}>
         <Image
           style={{
             width: 100,
