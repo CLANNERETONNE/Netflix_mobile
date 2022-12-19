@@ -7,8 +7,9 @@ import {
   View,
   Image,
 } from 'react-native';
-// import {API_KEY} from '@env';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import axios from 'axios';
+// import {API_KEY} from '@env';
 
 const Home = () => {
   //const API_KEY = 'AIzaSyB9M1E7bfBj3oLcLly7HHOQ8zh0-50Xnkw'; //AWS API_KEY
@@ -42,9 +43,11 @@ const Home = () => {
       });
   }, [page]);
 
+  const navigation = useNavigation();
+
   const renderItem = ({item}) => {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={navigation.navigate('Details', {id: item.id})}>
         <Image
           style={{
             width: 100,
