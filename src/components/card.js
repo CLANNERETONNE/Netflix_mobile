@@ -1,11 +1,11 @@
 import React from 'react';
-import {Image} from 'react-native';
+import { Cardstyled } from './card.styled';
 
 const Card = ({imageSource}) => {
     const imageOption = {uri: imageSource,};
 
     return (
-        <Image style={{height: 100, width: 100, backgroundColor: 'black',}} source={imageOption}/>
+        <Cardstyled source={imageOption}/>
     );
 };
 

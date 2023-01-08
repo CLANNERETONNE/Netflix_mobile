@@ -1,23 +1,18 @@
 import React from 'react';
 import { Text, TextInput, Button } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import StyledButton from '../components/styledButton';
 
 
-const Register = ({navigation}) => {
+const Register = () => {
     return(
         <SafeAreaView>
-            <Text>Register</Text>
+            <Text>NETFLIX</Text>
             <TextInput placeholder="Nom d'utilisateur" />
             <TextInput placeholder="Adressse e-mail" />
             <TextInput placeholder="Mot de passe" />
-            <Button
-                title="Créer un compte"
-                onPress={() => navigation.navigate('Home')}
-            />
-            <Button
-                title="Se connecter"
-                onPress={() => navigation.navigate('Login')}
-            />
+            <StyledButton butonTitle="Créer un compte" buttonType= "filled" goTo="Home"/>
+            <StyledButton butonTitle="Se connecter" buttonType= "bordered" goTo="Login"/>
         </SafeAreaView>
     );
 }
