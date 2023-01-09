@@ -1,19 +1,24 @@
 import React from 'react';
-import { Text, TextInput, Button } from 'react-native';
+import {Image} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Container, ImgContainer, Logo, TInputContainter, StyledTextInput } from './styled/loginRegister.styled';
 import StyledButton from '../components/styledButton';
 
 
 const Register = () => {
     return(
-        <SafeAreaView>
-            <Text>NETFLIX</Text>
-            <TextInput placeholder="Nom d'utilisateur" />
-            <TextInput placeholder="Adressse e-mail" />
-            <TextInput placeholder="Mot de passe" />
+        <Container>
+            <ImgContainer>
+                <Image style={{height: 70, width: 270,}} source={require('../img/Netflix.png')}/>
+            </ImgContainer>
+            <TInputContainter>
+                <StyledTextInput placeholder="Nom d'utilisateur" placeholderTextColor="#8F8F8F"/>
+                <StyledTextInput placeholder="Adressse e-mail" placeholderTextColor="#8F8F8F"/>
+                <StyledTextInput placeholder="Mot de passe" placeholderTextColor="#8F8F8F"/>
+            </TInputContainter>
             <StyledButton butonTitle="Créer un compte" buttonType= "filled" goTo="Home"/>
             <StyledButton butonTitle="Se connecter" buttonType= "bordered" goTo="Login"/>
-        </SafeAreaView>
+        </Container>
     );
 }
 export default Register;

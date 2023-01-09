@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
-import {FlatList, SafeAreaView, Text, TouchableOpacity, Image, View, ScrollView} from 'react-native';
+import {FlatList, SafeAreaView, Text, TouchableOpacity, Image, Button, View, ScrollView} from 'react-native';
 import axios from 'axios';
 import {API_KEY} from '@env';
+import { Container, BottomContainer, TextTitle, TextInfo, ButtonContainer, FilledButton, FilledButtonText, BorderedButton, BorderedButtonText, TextDescription} from './styled/details.styled';
 
 const Details = ({route}) => {
     const [movie, setMovie] = React.useState({});
@@ -23,12 +24,22 @@ const Details = ({route}) => {
     }, [route.params.id]);
 
     return (
-        <View>
+        <Container>
             <Image style={{width: 400, height: 200, backgroundColor: 'black',}} source={{uri: `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`,}}/>
-            <Text>{movie.title}</Text>
-            <Text>{movie.release_date}</Text>
-            <Text>{movie.overview}</Text>
-        </View>
+            <BottomContainer>
+                <TextTitle>{movie.title}</TextTitle>
+                <TextInfo>{movie.release_date}</TextInfo>
+                <ButtonContainer>
+                    <FilledButton>
+                        <FilledButtonText>Voir</FilledButtonText>
+                    </FilledButton>
+                    <BorderedButton>
+                        <BorderedButtonText>Ma liste</BorderedButtonText>
+                    </BorderedButton>
+                </ButtonContainer>
+                <TextDescription>{movie.overview}</TextDescription>
+            </BottomContainer>
+        </Container>
     );
 };
 

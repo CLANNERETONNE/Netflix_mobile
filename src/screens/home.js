@@ -2,8 +2,8 @@ import React, {useEffect} from 'react';
 import {FlatList, SafeAreaView, Text, TouchableOpacity, Image, View, ScrollView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import axios from 'axios';
-import Card from '../components/card';
 import {API_KEY} from '@env';
+import Card from '../components/card';
 import styled from 'styled-components';
 
 const Home = () => {

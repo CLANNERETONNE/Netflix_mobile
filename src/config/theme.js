@@ -4,6 +4,7 @@ const theme = {
     tertiary: '#FFFFFF',
     textPrimary: '#FFFFFF',
     textSecondary: '#8F8F8F',
+    textTertiary: '#202020',
 };
 
 export default theme;

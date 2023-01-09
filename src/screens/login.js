@@ -1,8 +1,7 @@
 import React from 'react';
 import {Image} from 'react-native';
 import StyledButton from '../components/styledButton';
-import styled from 'styled-components';
-
+import { Container, ImgContainer, Logo, TInputContainter, StyledTextInput } from './styled/loginRegister.styled';
 
 const Login = () => {
     return(
@@ -19,46 +18,5 @@ const Login = () => {
         </Container>
     );
 }
-
-const Container = styled.SafeAreaView`
-    background-color: ${props => props.theme.primary};
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-`;
-
-//  ----- Image ----- //
-const ImgContainer = styled.View`
-    height: 30%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-const Logo = styled.Image`
-    width: 414;
-    height: 126;
-`;
-
-//  ----- TextInput ----- //
-const TInputContainter = styled.View`
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-const StyledTextInput = styled.TextInput`
-    background-color: ${props => props.theme.secondary};
-    color: ${props => props.theme.textPrimary};
-    width: 90%;
-    height: 48px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-`;
 
 export default Login;

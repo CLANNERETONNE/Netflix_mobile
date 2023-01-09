@@ -4,3 +4,7 @@ BorderButton
 Firebase
 specified list, multiple request, call component
 <MovieList filtre={}/>
+
+https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key=<<api_key>>&language=en-US&page=1
+
+Les mieux notés, les derniers
