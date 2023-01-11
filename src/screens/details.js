@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {FlatList, SafeAreaView, Text, TouchableOpacity, Image, Button, View, ScrollView} from 'react-native';
+import { Image } from 'react-native';
 import axios from 'axios';
 import {API_KEY} from '@env';
 import { Container, BottomContainer, TextTitle, TextInfo, ButtonContainer, FilledButton, FilledButtonText, BorderedButton, BorderedButtonText, TextDescription} from './styled/details.styled';

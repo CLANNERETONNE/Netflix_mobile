@@ -1,49 +1,26 @@
-import React, {useEffect} from 'react';
-import {FlatList, SafeAreaView, Text, TouchableOpacity, Image, View, ScrollView} from 'react-native';
+import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import axios from 'axios';
-import {API_KEY} from '@env';
-import Card from '../components/card';
 import styled from 'styled-components';
+import MovieList from '../components/movieList';
+import Navbar from '../components/navbar';
 
 const Home = () => {
-  const [movies, setMovies] = React.useState([]);
-
-  useEffect(() => {
-    axios
-      .get('https://api.themoviedb.org/3/movie/popular', {
-        params: {
-          api_key: API_KEY,
-          language: 'fr',
-        },
-      })
-      .then(res => {
-        setMovies([...movies, ...res.data.results]);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }, []);
-
-  const renderItem = ({ item }) => {
-    return (
-        <TouchableOpacity  onPress={() => {navigation.navigate('Details', {id: item.id});}}>
-            <Card imageSource={`https://image.tmdb.org/t/p/w200/${item.poster_path}`}/>
-        </TouchableOpacity>
-    );
-  };
 
   const navigation = useNavigation();
   return (
     <Container>
+      <Navbar></Navbar>
       <ListContainer>
-        <TitleList>Populaire en ce moment</TitleList>
-        <FlatList
-            data={movies}
-            renderItem={renderItem}
-            keyExtractor={item => item.id}
-            horizontal
-        />
+        <TitleList>Les plus populaires</TitleList>
+        <MovieList filter='popular'/>
+      </ListContainer>
+      <ListContainer>
+        <TitleList>Les mieux notés</TitleList>
+        <MovieList  filter='top_rated'/>
+      </ListContainer>
+      <ListContainer>
+        <TitleList>Nouveautés</TitleList>
+        <MovieList  filter='upcoming'/>
       </ListContainer>
     </Container>
   );
@@ -56,6 +33,7 @@ const Container = styled.SafeAreaView`
 `;
 const ListContainer = styled.SafeAreaView`
   margin: 10px;
+  margin-bottom: 0px;
 `;
 
 const TitleList = styled.Text`

@@ -5,12 +5,14 @@ import axios from 'axios';
 import {API_KEY} from '@env';
 import Card from '../components/card';
 
-const MovieList = ({request}) => {
+const MovieList = ({ filter }) => {
+
     const [movies, setMovies] = React.useState([]);
 
     useEffect(() => {
+      link = `https://api.themoviedb.org/3/movie/${filter}`;
       axios
-        .get(`https://api.themoviedb.org/3/movie/popular`, {
+        .get(link, {
           params: {
             api_key: API_KEY,
             language: 'fr',

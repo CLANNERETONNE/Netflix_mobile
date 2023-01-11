@@ -1,9 +1,8 @@
-Login Register
-FilledButton
-BorderButton
-Firebase
-specified list, multiple request, call component
-<MovieList filtre={}/>
+Login Register -- Firebase
+
+searchbar
+
+Ma Liste
 
 https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key=<<api_key>>&language=en-US&page=1
 
