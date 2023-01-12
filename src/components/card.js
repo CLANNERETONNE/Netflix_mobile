@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cardstyled } from './card.styled';
+import { Cardstyled } from './styled/card.styled';
 
 const Card = ({imageSource}) => {
     const imageOption = {uri: imageSource,};

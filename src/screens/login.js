@@ -2,10 +2,12 @@ import React from 'react';
 import {Image} from 'react-native';
 import StyledButton from '../components/styledButton';
 import { Container, ImgContainer, Logo, TInputContainter, StyledTextInput } from './styled/loginRegister.styled';
+import CustomStatusBar from '../components/customStatusBar';
 
 const Login = () => {
     return(
         <Container>
+            <CustomStatusBar transparent='false'/>
             <ImgContainer>
                 <Image style={{height: 70, width: 270,}} source={require('../img/Netflix.png')}/>
             </ImgContainer>
