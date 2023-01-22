@@ -7,12 +7,12 @@ import Navbar from '../components/navbar';
 import CustomStatusBar from '../components/customStatusBar';
 
 const Home = () => {
-
   const navigation = useNavigation();
+
   return (
     <Container>
-      <CustomStatusBar transparent='true'/>
-      <Navbar></Navbar>
+      <CustomStatusBar statusBarColor='transparent'/>
+      <Navbar/>
       <ScrollView>
         <RandomImg source={{ uri: `https://image.tmdb.org/t/p/w500//63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg` }}/>
         <ListContainer>
@@ -53,5 +53,3 @@ const TitleList = styled.Text`
 `;
 
 export default Home;
-
-//titlelist

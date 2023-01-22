@@ -1,13 +1,15 @@
 import React from "react";
-import { Text, View } from 'react-native';
 import styled from "styled-components";
+import {useNavigation} from '@react-navigation/native';
 
 const Navbar = () => {
+    const navigation = useNavigation();
+
     return(
         <Container>
             <Logo source={require('../img/Netflix_N.png')}/>
             <NavRight>
-                <SearchButton />
+                <SearchButton onPress={() => navigation.navigate(`Search`)}/>
                 <ProfilButton />
             </NavRight>
         </Container>
@@ -16,7 +18,7 @@ const Navbar = () => {
 
 const Container = styled.View`
     position: absolute;
-    top: 24;
+    top: 24px;
     left: 0;
     right: 0;
     height: 60px;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Cardstyled = styled.Image`
+export const Card = styled.Image`
   border-radius: 10px;
   height: 150px;
   width: 100px;

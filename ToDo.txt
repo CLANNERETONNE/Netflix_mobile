@@ -10,3 +10,8 @@ https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&languag
 recommandation, page details
 https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key=<<api_key>>&language=en-US&page=1
 https://api.themoviedb.org/3/movie/{movie_id}/similar?api_key=<<api_key>>&language=en-US&page=1
+
+SearchHeader
+HomeHeader
+
+envoyer sting de Search a SearchResult, requete dans searchresult

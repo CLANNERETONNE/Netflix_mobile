@@ -3,11 +3,13 @@ import {Image} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Container, ImgContainer, Logo, TInputContainter, StyledTextInput } from './styled/loginRegister.styled';
 import StyledButton from '../components/styledButton';
+import CustomStatusBar from '../components/customStatusBar';
 
 
 const Register = () => {
     return(
         <Container>
+            <CustomStatusBar statusBarColor='grey'/>
             <ImgContainer>
                 <Image style={{height: 70, width: 270,}} source={require('../img/Netflix.png')}/>
             </ImgContainer>

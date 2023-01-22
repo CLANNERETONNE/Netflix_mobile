@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
-import { Image } from 'react-native';
+import { Image, StatusBar } from 'react-native';
 import axios from 'axios';
 import {API_KEY} from '@env';
 import { Container, BottomContainer, TextTitle, TextInfo, ButtonContainer, FilledButton, FilledButtonText, BorderedButton, BorderedButtonText, TextDescription} from './styled/details.styled';
+import CustomStatusBar from '../components/customStatusBar';
 
 const Details = ({route}) => {
     const [movie, setMovie] = React.useState({});
@@ -25,6 +26,7 @@ const Details = ({route}) => {
 
     return (
         <Container>
+            <CustomStatusBar statusBarColor='black'/>
             <Image style={{width: 400, height: 200, backgroundColor: 'black',}} source={{uri: `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`,}}/>
             <BottomContainer>
                 <TextTitle>{movie.title}</TextTitle>

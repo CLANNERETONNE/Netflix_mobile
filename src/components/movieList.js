@@ -3,7 +3,7 @@ import {FlatList, SafeAreaView, Text, TouchableOpacity, Image, View, ScrollView}
 import {useNavigation} from '@react-navigation/native';
 import axios from 'axios';
 import {API_KEY} from '@env';
-import Card from '../components/card';
+import { Card } from './styled/movieList.styled';
 
 const MovieList = ({ filter }) => {
 
@@ -28,9 +28,9 @@ const MovieList = ({ filter }) => {
   
     const renderItem = ({ item }) => {
       return (
-          <TouchableOpacity  onPress={() => {navigation.navigate('Details', {id: item.id});}}>
-              <Card imageSource={`https://image.tmdb.org/t/p/w200/${item.poster_path}`}/>
-          </TouchableOpacity>
+        <TouchableOpacity  onPress={() => {navigation.navigate('Details', {id: item.id});}}>
+          <Card source={{uri: `https://image.tmdb.org/t/p/w200/${item.poster_path}`}}/>
+        </TouchableOpacity>
       );
     };
   

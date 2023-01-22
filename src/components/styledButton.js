@@ -1,6 +1,5 @@
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {Text} from 'react-native';
 import { FilledButon, FilledButonText, BorderedButton, BorderedButonText } from './styled/styledButton.styled'; 
 
 
